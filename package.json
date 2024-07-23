@@ -1,0 +1,38 @@
+{
+  "name": "cypress-automation-binance",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "reinstall": "rm -rf node_modules package-lock.json && npm install",
+    "demo:open": "npx cypress open",
+    "demo:run": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjkepinsky/cypress-automation-binance.git"
+  },
+  "author": "Krzysztof Kepinski",
+  "license": "AGPL",
+  "bugs": {
+    "url": "https://github.com/cjkepinsky/cypress-automation-binance/issues"
+  },
+  "homepage": "https://github.com/cjkepinsky/cypress-automation-binance#readme",
+  "description": "Simple example of test automation for Binance website, based on Cypress.",
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "*",
+    "@types/node": "^20.14.9",
+    "@types/webpack": "^5.28.5",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "cypress": "^12.17.4",
+    "ts-loader": "^8.4.0",
+    "typescript": "^5.5.3",
+    "webpack": "*"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx --no -- commitlint --edit $1"
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.13.0"
+  }
+}

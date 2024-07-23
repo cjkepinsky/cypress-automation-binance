@@ -1,0 +1,15 @@
+/cypress/videos
+/cypress/screenshots
+/cypress/downloads
+/cypress/reports
+/node_modules
+/package-lock.json
+npm-debug.log*
+.git
+.idea
+.vscode
+.DS_Store
+Thumbs.db
+.cache
+.eslintcache
+*.tsbuildinfo
