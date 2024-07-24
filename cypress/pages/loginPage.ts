@@ -1,4 +1,4 @@
-import BasePage from "pages/basePage";
+import BasePage from "pages/common/basePage";
 
 export default class LoginPage extends BasePage {
   private readonly emailInput = '#login_input_email';

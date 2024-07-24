@@ -1,4 +1,4 @@
-import BasePage from "pages/basePage";
+import BasePage from "pages/common/basePage";
 
 export default class HotFeaturesDialog extends BasePage {
   container = 'div.style-dialog-body'

@@ -1,4 +1,4 @@
-import BasePage from "pages/basePage";
+import BasePage from "pages/common/basePage";
 
 export default class BubbleMsg extends BasePage {
   container = 'div.bn-bubble-content'

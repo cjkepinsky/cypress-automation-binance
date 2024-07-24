@@ -10,6 +10,7 @@ export default defineConfig({
     screenshotOnRunFailure: true,
     viewportWidth: 1920,
     viewportHeight: 1080,
+    watchForFileChanges: false,
     retries: {
       runMode: 1,
       openMode: 0,

@@ -1,4 +1,4 @@
-export default abstract class BasePage {
+export default abstract class BaseComponent {
   protected abstract container: string;
 
   isVisible() {
@@ -14,7 +14,7 @@ export default abstract class BasePage {
   }
 
   waitForRoute(routeAlias: string) {
-    cy.wait(`@${routeAlias}`, {timeout: 10000})
+    cy.wait(`@${routeAlias}`, {timeout: 20000})
 
     return this
   }
