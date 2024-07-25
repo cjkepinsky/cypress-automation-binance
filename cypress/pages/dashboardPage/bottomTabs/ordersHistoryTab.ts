@@ -17,6 +17,7 @@ export default class OrdersHistoryTab extends BaseTab {
 
   clickFilterBtnWith(label: string) {
     cy.get(`${this.positionsFiltersSel}:contains("${label}")`)
+      .click()
 
     return this
   }

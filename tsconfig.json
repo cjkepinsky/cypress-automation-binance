@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": ["es6", "dom"],
     "types": ["cypress", "node", "cypress-real-events"],
     "strict": true,
@@ -14,7 +14,8 @@
       "routes/*": ["cypress/routes/*"]
     },
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "node"
   },
   "include": ["cypress/**/*.ts"]
 }
