@@ -8,7 +8,6 @@ describe('Login And Buy', () => {
   const dashboardPage = new DashboardPage();
   const loginPage = new LoginPage();
 
-
   beforeEach(() => {
     UserDataRoutes.postUserPosition()
     OrdersRoutes.postClearPosition()
@@ -48,7 +47,6 @@ describe('Login And Buy', () => {
   it('should be able to buy BTCUSDT twice and show merged positions', () => {
     OrdersRoutes.postOrderHistory()
     OrdersRoutes.postPlaceOrder()
-    UserDataRoutes.postUserPosition()
 
     dashboardPage.orderForm
       .isMarketTabVisible()
@@ -61,21 +59,18 @@ describe('Login And Buy', () => {
     dashboardPage.bottomTabs.positionsTab
       .isTabVisible()
       .clickTab()
-      // .waitForRoute('postUserPosition')
-      .wait(4)
+      .wait(3)
 
       .isPositionsNumberEq(1)
       .doPositionsContain('0.010 BTC')
-      // .doesPositionContain(0, 'BTCUSDT')
 
     dashboardPage.orderForm
       .typeUnitsInput('0.02')
       .clickBuyBtn()
       .waitForRoute('postPlaceOrder')
+      .wait(3)
 
     dashboardPage.bottomTabs.positionsTab
-      // .waitForRoute('postUserPosition')
-      .wait(4)
       .isPositionsNumberEq(1)
       .doPositionsContain('0.030 BTC')
 
@@ -83,16 +78,19 @@ describe('Login And Buy', () => {
     dashboardPage.bottomTabs.ordersHistoryTab
       .clickTab()
       .waitForRoute('postOrderHistory')
-      .wait(2)
+      .clickFilterBtnWith('1 Day')
+      .wait(0.5)
 
       .doesPositionContain(0, 'BTCUSDT')
       .doesPositionContain(0, 'Market')
       .doesPositionContain(0, 'Sell')
       .doesPositionContain(0, '0.030 BTC')
+
       .doesPositionContain(1, 'BTCUSDT')
       .doesPositionContain(1, 'Market')
       .doesPositionContain(1, 'Buy')
       .doesPositionContain(1, '0.020 BTC')
+
       .doesPositionContain(2, 'BTCUSDT')
       .doesPositionContain(2, 'Market')
       .doesPositionContain(2, 'Buy')
