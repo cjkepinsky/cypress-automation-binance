@@ -1,4 +1,4 @@
-import BaseTab from "pages/common/baseTab";
+import BaseTab from 'pages/common/baseTab';
 
 export default class OrdersHistoryTab extends BaseTab {
   protected container = '[data-testid="orderHistoryTableInfo"]'
@@ -16,7 +16,7 @@ export default class OrdersHistoryTab extends BaseTab {
   }
 
   clickFilterBtnWith(label: string) {
-    cy.get(`${this.positionsFiltersSel}:contains("${label}")`)
+    cy.get(`${this.positionsFiltersSel}:contains('${label}')`)
       .click()
 
     return this

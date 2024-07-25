@@ -3,6 +3,7 @@ import config from "config/base.config";
 import DashboardPage from "pages/dashboardPage";
 import OrdersRoutes from "routes/ordersRoutes";
 import UserDataRoutes from "routes/userDataRoutes";
+import orderLabels from "datasets/orderLabels.json"
 
 describe('Login And Buy', () => {
   const dashboardPage = new DashboardPage();
@@ -79,19 +80,19 @@ describe('Login And Buy', () => {
       .clickFilterBtnWith('1 Day')
       .wait(0.5)
 
-      .doesPositionContain(0, 'BTCUSDT')
-      .doesPositionContain(0, 'Market')
-      .doesPositionContain(0, 'Sell')
+      .doesPositionContain(0, orderLabels.btcusd)
+      .doesPositionContain(0, orderLabels.market)
+      .doesPositionContain(0, orderLabels.sell)
       .doesPositionContain(0, '0.030 BTC')
 
-      .doesPositionContain(1, 'BTCUSDT')
-      .doesPositionContain(1, 'Market')
-      .doesPositionContain(1, 'Buy')
+      .doesPositionContain(1, orderLabels.btcusd)
+      .doesPositionContain(1, orderLabels.market)
+      .doesPositionContain(1, orderLabels.buy)
       .doesPositionContain(1, '0.020 BTC')
 
-      .doesPositionContain(2, 'BTCUSDT')
-      .doesPositionContain(2, 'Market')
-      .doesPositionContain(2, 'Buy')
+      .doesPositionContain(2, orderLabels.btcusd)
+      .doesPositionContain(2, orderLabels.market)
+      .doesPositionContain(2, orderLabels.buy)
       .doesPositionContain(2, '0.010 BTC')
   });
 });

@@ -1,4 +1,4 @@
-import BasePage from "pages/common/basePage";
+import BasePage from 'pages/common/basePage';
 
 export default abstract class BaseTab extends BasePage {
   protected abstract container: string
@@ -6,7 +6,7 @@ export default abstract class BaseTab extends BasePage {
 
   isTabVisible() {
     cy.get(this.tabSel)
-      .should("be.visible")
+      .should('be.visible')
 
     return this
   }

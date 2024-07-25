@@ -1,4 +1,5 @@
-import BaseTab from "pages/common/baseTab";
+import BaseTab from 'pages/common/baseTab';
+import dialogLabels from 'datasets/dialogLabels.json'
 
 export default class PositionsTab extends BaseTab {
   protected container = '[data-testid="positionTableInfo"]'
@@ -37,7 +38,7 @@ export default class PositionsTab extends BaseTab {
       if ($btn.length > 0) {
         if ($btn.is(':visible') && !$btn.is(':disabled')) {
           this.clickCloseAllPositionsBtn()
-          this.confirmDlg.clickBtnWithLabel('Confirm')
+          this.confirmDlg.clickBtnWithLabel(dialogLabels.confirmBtn)
           this.waitForRoute('postClearPosition')
         }
       }

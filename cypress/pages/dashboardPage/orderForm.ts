@@ -1,4 +1,4 @@
-import BasePage from "pages/common/basePage";
+import BasePage from 'pages/common/basePage';
 
 export default class OrderForm extends BasePage {
   protected container = 'div[name="orderForm"]'
@@ -9,7 +9,7 @@ export default class OrderForm extends BasePage {
 
   isLoginWithEmailBtnVisible() {
     cy.get(this.loginWithEmailBtn)
-      .should("be.visible")
+      .should('be.visible')
 
     return this
   }
@@ -23,7 +23,7 @@ export default class OrderForm extends BasePage {
 
   isBuyBtnVisible() {
     cy.get(this.buyBtn)
-      .should("be.visible")
+      .should('be.visible')
 
     return this
   }
@@ -37,7 +37,7 @@ export default class OrderForm extends BasePage {
 
   isMarketTabVisible() {
     cy.get(this.marketTab)
-      .should("be.visible")
+      .should('be.visible')
 
     return this
   }
@@ -51,7 +51,7 @@ export default class OrderForm extends BasePage {
 
   isUnitsInputVisible() {
     cy.get(this.unitsInput)
-      .should("be.visible")
+      .should('be.visible')
 
     return this
   }

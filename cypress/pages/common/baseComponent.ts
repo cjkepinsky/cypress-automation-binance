@@ -2,7 +2,7 @@ export default abstract class BaseComponent {
   protected abstract container: string;
 
   isVisible() {
-    cy.get(this.container, {timeout: 120000}).should('be.visible');
+    cy.get(this.container).should('be.visible');
 
     return this;
   }

@@ -9,6 +9,7 @@
     "paths": {
       "config/*": ["cypress/config/*"],
       "consts/*": ["cypress/consts/*"],
+      "datasets/*": ["cypress/datasets/*"],
       "helpers/*": ["cypress/helpers/*"],
       "pages/*": ["cypress/pages/*"],
       "routes/*": ["cypress/routes/*"]

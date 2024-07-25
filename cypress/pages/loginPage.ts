@@ -1,28 +1,28 @@
-import BasePage from "pages/common/basePage";
+import BasePage from 'pages/common/basePage';
 
 export default class LoginPage extends BasePage {
-  protected container = "div#login-form"
+  protected container = 'div#login-form'
   private readonly emailInput = '#login_input_email';
   private readonly passwordInput = '#login_input_password';
   private readonly loginButton = '#login_input_login';
 
   isEmailInputVisible() {
     cy.get(this.emailInput)
-      .should("be.visible")
+      .should('be.visible')
 
     return this
   }
 
   isPasswordInputVisible() {
     cy.get(this.passwordInput)
-      .should("be.visible")
+      .should('be.visible')
 
     return this
   }
 
   isLoginBtnVisible() {
     cy.get(this.loginButton)
-      .should("be.visible")
+      .should('be.visible')
 
     return this
   }
