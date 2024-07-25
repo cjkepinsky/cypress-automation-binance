@@ -1,9 +1,9 @@
 import LoginPage from 'pages/loginPage';
-import config from "config/base.config";
-import DashboardPage from "pages/dashboardPage";
-import OrdersRoutes from "routes/ordersRoutes";
-import UserDataRoutes from "routes/userDataRoutes";
-import orderLabels from "datasets/orderLabels.json"
+import config from 'config/base.config';
+import DashboardPage from 'pages/dashboardPage';
+import OrdersRoutes from 'routes/ordersRoutes';
+import UserDataRoutes from 'routes/userDataRoutes';
+import orderLabels from 'datasets/orderLabels.json'
 
 describe('Login And Buy', () => {
   const dashboardPage = new DashboardPage();
