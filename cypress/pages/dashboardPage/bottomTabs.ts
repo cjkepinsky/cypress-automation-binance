@@ -3,7 +3,7 @@ import PositionsTab from "pages/dashboardPage/bottomTabs/positionsTab";
 import OrdersHistoryTab from "pages/dashboardPage/bottomTabs/ordersHistoryTab";
 
 export default class BottomTabs extends BasePage {
-  container = ''
+  protected container = ''
   public positionsTab = new PositionsTab()
   public ordersHistoryTab = new OrdersHistoryTab()
 }

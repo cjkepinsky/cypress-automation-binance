@@ -28,7 +28,6 @@ describe('Login And Buy', () => {
       .typeEmailInput(config.credentials.username)
       .typePasswordInput(config.credentials.password)
       .clickLoginBtn()
-
     dashboardPage.featuresDialog
       .isVisible()
       .wait(1)
@@ -37,7 +36,6 @@ describe('Login And Buy', () => {
     dashboardPage.bubbleMsg
       .isVisible()
       .clickConfirmBtn()
-
     dashboardPage.bottomTabs.positionsTab.clickTab()
     dashboardPage.bottomTabs.positionsTab
       .waitForRoute('postUserPosition')
@@ -95,6 +93,5 @@ describe('Login And Buy', () => {
       .doesPositionContain(2, 'Market')
       .doesPositionContain(2, 'Buy')
       .doesPositionContain(2, '0.010 BTC')
-
   });
 });

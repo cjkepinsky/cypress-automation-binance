@@ -6,11 +6,11 @@ import BubbleMsg from "pages/dashboardPage/bubbleMsg";
 import BottomTabs from "pages/dashboardPage/bottomTabs";
 
 export default class DashboardPage extends BasePage {
-  protected container = 'div.react-grid-layout'
   public orderForm = new OrderForm()
   public featuresDialog = new HotFeaturesDialog()
   public bubbleMsg = new BubbleMsg()
   public bottomTabs = new BottomTabs()
+  protected container = 'div.react-grid-layout'
 
   openPage(): this {
     super.openPage(config.baseUrl);

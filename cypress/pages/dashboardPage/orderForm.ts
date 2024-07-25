@@ -7,7 +7,6 @@ export default class OrderForm extends BasePage {
   private readonly marketTab: string = '[id="tab-MARKET"]'
   private readonly unitsInput: string = '[name="unitAmount"]'
 
-
   isLoginWithEmailBtnVisible() {
     cy.get(this.loginWithEmailBtn)
       .should("be.visible")
@@ -57,18 +56,10 @@ export default class OrderForm extends BasePage {
     return this
   }
 
-  clickUnitsInput() {
-    cy.get(this.unitsInput)
-      .click()
-
-    return this
-  }
-
   typeUnitsInput(text: string) {
     cy.get(this.unitsInput)
       .type(text)
 
     return this
   }
-
 }

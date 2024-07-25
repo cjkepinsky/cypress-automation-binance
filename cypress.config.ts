@@ -1,8 +1,7 @@
-import { defineConfig } from 'cypress';
+import {defineConfig} from 'cypress';
 
 export default defineConfig({
   e2e: {
-    baseUrl: 'https://testnet.binancefuture.com/en/login',
     specPattern: 'cypress/e2e/**/*.spec.ts',
     supportFile: 'cypress/support/e2e.ts',
     defaultCommandTimeout: 10000,

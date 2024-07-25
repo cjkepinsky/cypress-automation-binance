@@ -1,8 +1,9 @@
 import BaseTab from "pages/common/baseTab";
 
 export default class OrdersHistoryTab extends BaseTab {
-  container = '[data-testid="orderHistoryTableInfo"]'
-  tabSel = '[data-testid="OrderHistory"]'
+  protected container = '[data-testid="orderHistoryTableInfo"]'
+  protected tabSel = '[data-testid="OrderHistory"]'
+  // TODO discuss with Developers if they can add data-testid attributes for these elements
   private readonly positionsContainerSel = `${this.container} [data-testid="DataTable"] > div:nth-of-type(3)`
   private readonly positionsFiltersSel = `${this.container} div.bn-tab__third`
   private readonly positionsSel = `${this.positionsContainerSel} > div:nth-of-type(2) > div.w-full`

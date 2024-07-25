@@ -1,7 +1,7 @@
 import BasePage from "pages/common/basePage";
 
 export default abstract class BaseTab extends BasePage {
-  container = ''
+  protected abstract container: string
   protected abstract tabSel: string
 
   isTabVisible() {

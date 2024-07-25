@@ -1,7 +1,7 @@
 import BasePage from "pages/common/basePage";
 
 export default class HotFeaturesDialog extends BasePage {
-  container = 'div.style-dialog-body'
+  protected container = 'div.style-dialog-body'
   private readonly footerBtn: string = 'div.modal-footer button'
   private readonly lastFeatureAcc: string = '[data-index="4"] > .step-title'
   private readonly featuresList: string = 'div.step-wrap'

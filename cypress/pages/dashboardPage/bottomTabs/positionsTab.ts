@@ -1,8 +1,8 @@
 import BaseTab from "pages/common/baseTab";
 
 export default class PositionsTab extends BaseTab {
-  container = '[data-testid="positionTableInfo"]'
-  tabSel = '[data-testid="Positions"]'
+  protected container = '[data-testid="positionTableInfo"]'
+  protected tabSel = '[data-testid="Positions"]'
   private readonly closeAllPositionsBtn = `${this.container} div.closePosition button`
   private readonly positionsContainerSel = `${this.container} div.list-item-container`
   private readonly positionsSel = `${this.positionsContainerSel} > div.items-center`
