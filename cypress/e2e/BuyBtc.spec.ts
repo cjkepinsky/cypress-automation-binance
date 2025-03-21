@@ -58,7 +58,7 @@ describe('Login And Buy', () => {
     dashboardPage.bottomTabs.positionsTab
       .isTabVisible()
       .clickTab()
-      .wait(3)
+      .isVisible()
 
       .isPositionsNumberEq(1)
       .doPositionsContain('0.010 BTC')
